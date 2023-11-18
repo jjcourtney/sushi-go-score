@@ -6,29 +6,29 @@ function PlayerRow({ number, name }: { number: number; name: string }) {
   return (
     <div className="flex flex-col items-center">
       <input
-        className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4 text-zinc-900"
+        className="md:w-48 w-28 h-12 rounded-lg border-2 border-gray-300 px-4 text-zinc-900"
         placeholder={name}
       />
       <input
-        className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4  text-zinc-900"
+        className="md:w-48 w-28 h-12 rounded-lg border-2 border-gray-300 px-4  text-zinc-900"
         placeholder="0"
         type="number"
         id={`player-${number}-round-1`}
       />
       <input
-        className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4  text-zinc-900"
+        className="md:w-48 w-28 h-12 rounded-lg border-2 border-gray-300 px-4  text-zinc-900"
         placeholder="0"
         type="number"
         id={`player-${number}-round-2`}
       />
       <input
-        className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4  text-zinc-900"
+        className="md:w-48 w-28 h-12 rounded-lg border-2 border-gray-300 px-4  text-zinc-900"
         placeholder="0"
         type="number"
         id={`player-${number}-round-3`}
       />
       <input
-        className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4  text-zinc-900"
+        className="md:w-48 w-28 h-12 rounded-lg border-2 border-gray-300 px-4  text-zinc-900"
         placeholder="0"
         type="number"
         id={`player-${number}-bonus`}
@@ -49,7 +49,7 @@ function RowTitle() {
     return (
       <div
         key={index}
-        className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4"
+        className="md:w-48 w-28 h-12 rounded-lg border-2 border-gray-300 px-4"
       >
         {title}
       </div>
