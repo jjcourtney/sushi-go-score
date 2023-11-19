@@ -24,7 +24,7 @@ export default function Home() {
   );
 
   return (
-    <main className="flex min-h-screen flex-col items-center  p-24">
+    <main className="flex min-h-screen flex-col items-center p-24">
       <div className="flex flex-row items-center">
         <RowTitle />
         {players.map((player, index) => {
@@ -51,12 +51,12 @@ export default function Home() {
         />
         <button
           onClick={addPlayer}
-          className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4"
+          className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4 hover:bg-green-600 hover:text-black"
         >
           Add Player
         </button>
         <button
-          className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4 bg-green-900"
+          className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4 bg-green-900 hover:bg-green-600 hover:text-black"
           onClick={() => calculateScores(playerScore)}
         >
           Calculate
