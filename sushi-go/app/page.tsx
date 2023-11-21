@@ -43,6 +43,7 @@ export default function Home() {
               key={player}
               playerScore={playerScore}
               setPlayerScore={setPlayerScore}
+              players={players}
             />
           );
         })}
