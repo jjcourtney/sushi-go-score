@@ -19,6 +19,14 @@ export default function Home() {
     setPlayerScore([...playerScore, [0, 0, 0, 0]]);
   };
 
+  const [winnerOfRound1, setWinnerOfRound1] = useState(null as number | null);
+
+  const calculateWinner = () => {
+    const index = calculateScores(playerScore);
+
+    setWinnerOfRound1(index);
+  };
+
   const [playerScore, setPlayerScore] = useState(
     players.map(() => [0, 0, 0, 0])
   );
@@ -57,10 +65,14 @@ export default function Home() {
         </button>
         <button
           className="w-48 h-12 rounded-lg border-2 border-gray-300 px-4 bg-green-900 hover:bg-green-600 hover:text-black"
-          onClick={() => calculateScores(playerScore)}
+          onClick={() => calculateWinner()}
         >
           Calculate
         </button>
+      </div>
+      <div className="mt-10">
+        The winner of round 1 is:{" "}
+        {winnerOfRound1 !== null ? players[winnerOfRound1] : "TBC"}
       </div>
     </main>
   );
